@@ -1,0 +1,852 @@
+:root {
+  --weiss: #fff;
+  --schwarz: #000;
+  --grau: #e3e3e3;
+  --hintergrund: #7fffd4;
+  --hintergrund-ausgewählt: #51d1a7;
+  --elementHintergrund: #fff;
+  --header: #fff;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--hintergrund);
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ==================== */
+/* === ALLGEMEIN === */
+/* ==================== */
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+
+}
+
+.active {
+  background-color: var(--grau) !important;
+}
+
+.hidden {
+  display: none;
+}
+
+
+#scroll-bottom {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: peru;
+}
+
+#scroll-bottom~a {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+
+#edit-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: violet;
+}
+
+#theme-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: darkgray;
+}
+
+.htmlcontainer {
+  width: 100%;
+  width: 100%;
+  overflow: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.img {
+  width: 75%;
+  height: 200px;
+  background: url(../img/notAvailable.png) no-repeat center center;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+
+
+/* ==================== */
+/* === NAVIGATION === */
+/* ==================== */
+
+#header-nav {
+  width: 100%;
+  height: 80px;
+  background-color: var(--header);
+  position: relative;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 10px #3d3d3d;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#header-nav a>img {
+  height: 54.4px;
+  width: auto;
+  float: left;
+  margin-top: 0.81rem;
+  border-radius: 25%;
+  background-color: var(--hintergrund);
+  transition: background-color 0.2s ease-in-out;
+}
+
+#header-nav ul {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  float: right;
+  list-style-type: none;
+  position: relative;
+}
+
+#header-nav #desktop-nav ul>li {
+  display: inline-block;
+  height: 100%;
+  padding: 0 0.8rem 0 0.8rem;
+}
+
+#header-nav ul>li>a {
+  display: inline-block;
+  margin-top: 1.8rem;
+  font-size: 1.2rem;
+}
+
+#header-nav #desktop-nav ul>li>a {
+  color: black;
+  transition: color 0.2s ease-in-out;
+}
+
+#header-nav #desktop-nav ul>li>a:hover {
+  color: red;
+  transition: color 0.2s ease-in-out;
+}
+
+#header-nav .row,
+#header-nav .container,
+#header-nav .col-6 {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 100%;
+}
+
+#header-nav .col-6 {
+  text-align: center;
+}
+
+/* ============================== */
+/* === MOBILE NAVIGATIONSLEISte === */
+/* ============================== */
+
+#mobile-nav {
+  justify-content: center;
+}
+
+.mobile-nav-button {
+  justify-content: center;
+  color: #3d3d3d;
+  float: right;
+  font-size: 3rem;
+  border: 2px solid #3d3d3d;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  margin-top: 1.09375rem;
+  margin-bottom: 1.09375rem;
+}
+
+.mobile-nav-button>span {
+  position: absolute;
+  top: -10.5px;
+  left: 7.5px;
+}
+
+#mobile-nav-content ul {
+  list-style-type: none;
+}
+
+#mobile-nav-content ul>li {
+  display: block;
+  background-color: var(--weiss);
+  height: 40px;
+  padding: 0 1.2rem;
+}
+
+#mobile-nav-content ul>li>a {
+  margin: 0;
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+
+#mobile-nav-dropdown {
+  position: relative;
+  float: right;
+}
+
+#mobile-nav-content {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  display: none;
+}
+
+#mobile-nav-dropdown:hover>#mobile-nav-content {
+  display: block;
+}
+
+#mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: block;
+  }
+}
+
+/* ==================== */
+/* === HEADER === */
+/* ==================== */
+
+#header-banner {
+  width: 100%;
+  height: 0;
+  padding-top: 15.78%;
+  background: url(../img/Header.png) no-repeat center center;
+  background-size: contain;
+}
+
+#header-banner input {
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  width: 30%;
+  height: 30px;
+  top: 40%;
+  left: 35.15625%;
+  text-align: center;
+}
+
+/* ==================== */
+/* === Header Banner Rezepte ===  */
+/* ==================== */
+
+#header-banner-rezepte {
+  width: 100%;
+  background: url(../img/Rezepte\ hintergrund.png) no-repeat center center;
+  background-size: contain;
+  padding-bottom: 7.9%;
+  text-align: center;
+}
+
+#header-banner-rezepte input {
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  width: 30%;
+  height: 50px;
+  margin-top: 5.28%;
+  text-align: center;
+  background-color: var(--weiss);
+}
+
+@media (max-width: 1200px) {
+  #header-banner-rezepte input {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1100px) {
+  #header-banner-rezepte input {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #header-banner-rezepte input {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  #header-banner-rezepte input {
+    width: 80%;
+  }
+}
+
+/* ==================== */
+/* === Einleitung === */
+/* ==================== */
+
+#einleitung {
+  position: relative;
+}
+
+#intro-container {
+  text-align: center;
+}
+
+#intro-container h1 {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+#intro-container p {
+  font-size: 1.2rem;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================== */
+/* Startseite */
+/* ==================== */
+
+.rezeptanzeige .col-6>article>h1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rezeptanzeige .col-2 {
+  text-align: center;
+  align-items: center;
+}
+
+.rezeptanzeige article {
+  width: 60%;
+  margin-right: auto;
+  border: 3px solid black;
+  box-shadow: 0 0 10px #3d3d3d;
+  margin-left: auto;
+  background-color: var(--elementHintergrund);
+  transition: background-color 0.1s ease-in-out 0.1s;
+}
+
+.rezeptanzeige h1 {
+  margin: 0;
+  width: 80%;
+}
+
+.rezeptanzeige img {
+  width: 80%;
+}
+
+
+
+.rezeptanzeige div.col-2>article>a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.rezeptanzeige div.col-2>article:hover {
+  background-color: var(--grau);
+  transition: background-color ease-in-out 0.5s;
+}
+
+.rezeptanzeige div.col-2:nth-child(3n)>article {
+  margin-left: 0;
+}
+
+.rezeptanzeige div.col-2:nth-child(3n + 1)>article {
+  margin-right: 0;
+}
+
+@media (max-width: 1024px) {
+  .rezeptanzeige .col-2 {
+    width: 100%;
+  }
+
+  .rezeptanzeige .row>div.col-2>article {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+
+  .rezeptanzeige img {
+    width: 60%;
+  }
+
+  .rezeptanzeige h1 {
+    font-size: 2rem;
+  }
+
+  .rezeptanzeige p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1300px) {
+
+  .rezeptanzeige>.row>div.col-2>article {
+    width: 80%;
+  }
+}
+#grob-auswahl .row .col-1-5 {
+  text-align: center ;
+}
+#grob-auswahl .row .col-1-5 img {
+  width: 80%;
+}
+
+/* ==================== */
+/* === REZEPTE Anzeige === */
+/* ==================== */
+
+
+
+
+#rezepte-anzeige div.col-1-5>article {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--elementHintergrund);
+  transition: background-color 0.2s ease-in-out;
+  border: 2px solid black;
+  box-shadow: 0 0 10px #3d3d3d;
+  position: relative;
+}
+
+#rezepte-anzeige div.col-1-5>article h3 {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+
+#rezepte-anzeige div.col-6 h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#rezepte-anzeige div.col-1-5>article img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-bottom: 1rem;
+}
+
+
+#rezepte-anzeige div.col-1-5>article p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+#rezepte-anzeige div.col-1-5>article div:nth-of-type(n+2) {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#rezepte-anzeige div.col-1-5>article div:nth-of-type(2) {
+  background: url(../img/Timeico.jpg) no-repeat center center;
+  background-size: contain;
+}
+
+#rezepte-anzeige div.col-1-5>article div:nth-of-type(3) {
+  background: url(../img/CookTime.png) no-repeat center center;
+  background-size: contain;
+}
+
+
+
+#rezepte-anzeige div.col-1-5>article:hover {
+  background-color: var(--grau);
+  transition: background-color 0.2s ease-in-out 0.05s;
+}
+
+
+#abteilung-gesund .img {
+  background: url(../img/Salat.jpeg) no-repeat center center;
+  background-size: contain;
+}
+
+#abteilung-schnell .img {
+  background: url(../img/Burger.jpg) no-repeat center center;
+  background-size: contain;
+}
+
+
+
+/* ==================== */
+/* === FOOTER === */
+/* ==================== */
+
+html>body>footer {
+  background-color: white;
+  height: auto;
+  margin-top: 3rem;
+}
+
+html>body>footer img {
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+html>body>footer div.col-3 {
+  margin: 0;
+  padding: 0;
+}
+
+footer input {
+  text-align: center;
+  border: 1px solid black;
+  height: 10%;
+  width: 30%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+footer div:nth-child(1) {
+  text-align: center;
+}
+
+footer button {
+  padding: 0.7rem;
+  width: 30%;
+  height: 30%;
+}
+
+footer button>p {
+  margin: 0;
+}
+
+footer ul>li {
+  list-style-type: none;
+  display: inline;
+  margin-right: 2rem;
+}
+
+footer ul>li>a {
+  font-size: 1.2rem;
+}
+
+footer div.col-6 ul>li>a:hover {
+  color: red;
+}
+
+footer .row:nth-child(3)>div.col-6 {
+  width: 100%;
+  box-shadow: 0 0 10px #3d3d3d;
+}
+
+footer div.container {
+  width: 100%;
+}
+
+footer .row .col-6 p {
+  font-size: 1.4rem;
+  color: #3d3d3d;
+}
+
+/* === Impressum === */
+
+
+/* ==================== */
+/* === Rezept Liste === */
+/* ==================== */
+#rezept-liste-hauptteil article {
+  background-color: var(--hintergrund);
+  transition: background-color 0.5s ease-in-out;
+}
+
+#rezept-liste-hauptteil>article div.image-container {
+  width: 100%;
+  height: 300px;
+  background-image: url(../img/notAvailable.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#rezept-liste-hauptteil>article#Rezept-1 div.image-container {
+  background-image: url('../img/Burger2.jpg'), url(../img/notAvailable.png);
+  background-position-y: 600px;
+}
+
+#rezept-liste-hauptteil>article#Rezept-2 div.image-container {
+  background-image: url('../img/bauerntoast-rezept.jpg'),
+    url(../img/notAvailable.png);
+}
+
+#rezept-liste-hauptteil>article#Rezept-3 div.image-container {
+  background-image: url('../img/bauerntoast-rezept.jpg'),
+    url(../img/notAvailable.png);
+}
+
+
+
+#rezept-liste-hauptteil h1 {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-size: 1.8rem;
+}
+
+#rezept-liste-hauptteil>article div.col-2 {
+  height: 100%;
+}
+
+#rezept-liste-hauptteil>article>div.row>div.col-2>p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#rezept-liste-hauptteil>article div.row:nth-child(3) {
+  border-bottom: 2px solid black;
+}
+
+#rezept-liste-hauptteil>article div.row:nth-child(1) p {
+  font-size: 1.2rem;
+}
+
+#rezept-liste-hauptteil>article:hover {
+  background-color: var(--hintergrund-ausgewählt);
+  transition: background-color ease-in-out 0.45s;
+}
+
+#rezept-liste-hauptteil article div.col-1 h2 {
+  margin-bottom: 1rem;
+}
+
+
+#rezept-liste-hauptteil article div.col-1 h2~ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+#rezept-liste-hauptteil article div.col-1 h2~ul>li {
+  margin: .4rem 0;
+  font-size: 1.1rem;
+}
+
+
+/* ==================== */
+/* === Rezepte Auflisten ===  */
+/* ==================== */
+
+section#auswahl {
+  margin-top: 90px;
+}
+
+#auswahl div.row {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#auswahl div.row div.col-1-5 article {
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  height: 380px;
+  position: relative;
+  border-radius: 13%;
+}
+
+
+#auswahl div.row div.col-1-5:nth-of-type(n+2) article h2 {
+  font-size: 1.5rem;
+  top: 330px;
+  padding-top: 330px;
+  padding-bottom: 18px;
+  border-radius: 13%;
+}
+
+#auswahl div.row div.col-1-5:nth-of-type(2) article {
+  background: url(../img/Brotbild.jpg)no-repeat center center;
+  background-size: contain;
+}
+
+#auswahl div.row div.col-1-5:nth-of-type(3) article {
+  background: url(../img/BagelBild.jpg)no-repeat center center;
+  background-size: contain;
+}
+
+#auswahl div.row div.col-1-5:nth-of-type(4) article {
+  background: url(../img/brownies.jpg)no-repeat center center;
+  background-size: contain;
+}
+
+#auswahl div.row div.col-1-5:nth-of-type(1) article {
+  background-color: var(--grau);
+}
+
+#auswahl div.row div.col-1-5:nth-of-type(1) article h2 {
+  padding-top: 150px;
+}
+
+#auswahl div.row div.col-1-5 article h2 {
+  text-align: center;
+  margin: 0;
+}
+
+
+
+/* ==================== */
+/* === GRID-SYSTEM === */
+/* ==================== */
+
+.container {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.row::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  padding: 0.8rem;
+}
+
+/* 6 */
+.col-1 {
+  width: 16.666%;
+}
+
+/* 5 */
+.col-1-25 {
+  width: 20%;
+}
+
+/* 4 */
+.col-1-5 {
+  width: 25%;
+}
+
+/* 3 */
+.col-2 {
+  width: 33.333%;
+}
+
+/* 2 */
+.col-3 {
+  width: 50%;
+}
+
+/* 1.5 */
+.col-4 {
+  width: 66.666%;
+}
+
+/* 1.2 */
+.col-5 {
+  width: 83.333%;
+}
+
+/* 1 */
+.col-6 {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .col-1 {
+    width: 33.333%;
+  }
+
+
+  .col-1-25 {
+    width: 50%;
+  }
+
+  .col-1-5 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-1 {
+    width: 50%;
+  }
+
+  .col-1-25 {
+    width: 100%;
+  }
+
+  .col-1-5 {
+    width: 100%;
+  }
+
+  .col-2 {
+    width: 100%;
+  }
+
+  .col-3 {
+    width: 100%;
+  }
+
+  .col-4 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .col-1 {
+    width: 100%;
+  }
+
+  .col-1-5 {
+    width: 100%;
+  }
+
+  .col-2 {
+    width: 100%;
+  }
+
+  .col-3 {
+    width: 100%;
+  }
+
+  .col-4 {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+/* ============================== */
+/* ======== Testing ======= */
+/* ============================== */
